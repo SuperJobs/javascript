@@ -789,6 +789,40 @@
     }
     ```
 
+  - While documenting functions, leave single newline between the description/example and the params/returns. This helps in readability.
+  
+    ```javascript
+    // bad
+    /**
+     * make() returns a new element
+     * based on the passed in tag name
+     * @param {String} tag
+     * @return {Element} element
+     */
+    function make(tag) {
+
+      // ...stuff...
+
+      return element;
+    }
+    
+    // good
+    /**
+     * make() returns a new element
+     * based on the passed in tag name
+     *
+     * @param {String} tag
+     * @return {Element} element
+     */
+    function make(tag) {
+
+      // ...stuff...
+
+      return element;
+    }
+    
+    ```
+
   - Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
 
     ```javascript
@@ -842,39 +876,6 @@
       this.total = 0;
 
       return this;
-    }
-    ```
-
-  - When documenting Promises, use the `Promise<ResolvedValue|ErrorValue>` format.
-  
-    ```javascript
-    
-    // bad
-    /**
-     * @description
-     * Something descriptive, but brief about what this function does.
-     * 
-     * @param {String} name - Some name of some entity
-     * @returns Promise
-     */
-    function something (name) {
-      ...
-      
-      return namedPromise;
-    }
-     
-    // good
-    /**
-     * @description
-     * Something descriptive, but brief about what this function does.
-     * 
-     * @param {String} name - Some name of some entity
-     * @returns Promise<Array|Error>
-     */
-    function something (name) {
-      ...
-      
-      return namedPromise;
     }
     ```
 
