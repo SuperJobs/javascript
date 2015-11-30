@@ -360,6 +360,8 @@
     return denormalizeCompanyForDevice;
     ```
 
+  - Private functions should be named with a leading underscore
+  
 **[⬆ back to top](#table-of-contents)**
 
 
